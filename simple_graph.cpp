@@ -99,6 +99,22 @@ SimpleGraph::SimpleGraph(int v_number, PairVector &edges)
 
 	for(auto &u: edges)
 		connect(u.first, u.second);
+
+	// integrity check, not enabled, commented
+	// if(v_number < 3)
+	// 	throw "Invalid graph, cannot proceed";
+	//
+	// for(auto &v: vertexes)
+	// 	if(v.connected.size() < 1)
+	// 		throw "Invalid graph, cannot proceed";
+	//
+	// IntVector found;
+	// tarjan_algorithm(vx, found, vx);
+	// for(auto &v: vertexes)
+	// 	if(v.tarjan_numb == 0)
+	// 		throw "Invalid graph, cannot proceed";
+	//
+	// clear_values()
 }
 
 SimpleGraph::~SimpleGraph()
